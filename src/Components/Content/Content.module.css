@@ -1,0 +1,15 @@
+.content{
+    flex: 1 1 max-content;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}
+.table{
+    width: 80vw;
+    margin: 2vw;
+    text-align: center;
+    font-size: 2.5vh;
+}
+.theaders{
+    font-size: 4vh;
+}

@@ -1,0 +1,26 @@
+.footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex: 0 2 auto;
+
+}
+.random{
+    width: 200px;
+    height: 40px;
+    color: var(--color-primary);
+    background-color: white;
+    border: 1px solid rgb(108, 132, 255);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: 20px;
+    &:hover{
+        background-color:  var(--color-dark);
+        color: white;
+        cursor: pointer;
+    }
+}

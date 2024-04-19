@@ -1,0 +1,14 @@
+.header{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5em;
+    flex: 0 2 auto;
+    &:hover{
+    cursor: pointer;
+    }
+}
