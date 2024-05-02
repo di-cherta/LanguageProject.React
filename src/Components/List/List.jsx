@@ -9,10 +9,10 @@ export default function List() {
   const List = (Styles.list);
   const Wrapper = (Styles.wrapper);
   const animals = [
-    {word: 'cat', transcription: '[kæt]',translation: 'кошка'},
-    {word: 'dog', transcription: '[dɒɡ]',translation: 'собака'},
-    {word: 'hamster', transcription: '[ˈhæm.stər]',translation: 'хомяк'},
-    {word: 'snake', transcription: '[sneɪk]',translation: 'змея'},
+    {id: 1, word: 'cat', transcription: '[kæt]',translation: 'кошка'},
+    {id: 2, word: 'dog', transcription: '[dɒɡ]',translation: 'собака'},
+    {id: 3, word: 'hamster', transcription: '[ˈhæm.stər]',translation: 'хомяк'},
+    {id: 4, word: 'snake', transcription: '[sneɪk]',translation: 'змея'},
   ];
     const Changes = false;
   return (
@@ -27,16 +27,16 @@ export default function List() {
             <th>Word</th>
             <th>Transcription</th>
             <th>Translation</th>
-            <th style={{width: '150px'}}>Editing</th>
+            <th style={{width: '120px'}}>Editing</th>
           </tr>
         </thead>
         <tbody>
-          {animals.map((item, index)=>{
+          {animals.map((item)=>{
             return(
               <React.Fragment>
             {Changes ?
-            <Editing key={index} word={item.word} transcription={item.transcription} translation={item.translation} changes={item.changes}/>
-          : <Table key={index} word={item.word} transcription={item.transcription} translation={item.translation} changes={item.changes}/>}
+            <Editing key={item.id} word={item.word} transcription={item.transcription} translation={item.translation} changes={item.changes}/>
+          : <Table key={item.id} word={item.word} transcription={item.transcription} translation={item.translation} changes={item.changes}/>}
           </React.Fragment>
         )})}
         </tbody>
