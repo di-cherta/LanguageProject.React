@@ -1,4 +1,7 @@
-.list {
+*{
+  text-align: center;
+}
+.table {
   height: fit-content;
   width: 100vw;
   text-align: center;
@@ -9,21 +12,19 @@
   border-collapse: collapse;
   color: var(--color-dark);
 }
-.list th {
+.table th {
   box-sizing: border-box;
   width: 20vw;
   font-weight: bold;
   font-size: 2vh;
-  text-align: center;
   padding: 5px;
   background: #efefef;
   border: 1px solid #dddddd;
 }
-.list td {
+.table td {
   box-sizing: border-box;
   width: 20vw;
   font-size: 2vh;
-  text-align: center;
   border: 1px solid #dddddd;
   padding: 5px;
 }
