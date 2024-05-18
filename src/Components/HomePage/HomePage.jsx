@@ -5,9 +5,8 @@ import Footer from "../Footer/Footer";
 import Styles from './HomePage.module.css'
 
 export default function HomePage (){
-    const Wrapper = (Styles.wrapper);
     return(
-        <div className={Wrapper}>
+        <div className={Styles.wrapper}>
             <Header/>
             <Content/>
             <Footer/>

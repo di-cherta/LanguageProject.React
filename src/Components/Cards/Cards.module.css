@@ -8,11 +8,12 @@
 }
 
 .container{
-  max-width: fit-content;
+  max-width: 520px;
   flex: 1 1 max-content;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   color: var(--color-dark);
 }
@@ -24,6 +25,7 @@
   border: 3px dashed var(--color-dark);
   border-radius: 10px;
   padding: 10px;
+  margin: 0px 40px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -41,12 +43,12 @@
     transform: scale(1.1);
     }
 }
-.check{
+.cardbutton{
   width: 70px;
   background-color: var(--color-dark);
 }
 .next{
-  width: 100px;
+  width: 50px;
   background-color: var(--color-primary);
   border: 1px solid var(--color-primary);
 }
@@ -55,4 +57,7 @@ h1{
 }
 .translation{
   font-size: 32px;
+}
+.par{
+  margin-top: -50px;
 }

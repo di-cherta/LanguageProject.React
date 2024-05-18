@@ -2,13 +2,10 @@ import React from 'react';
 import Styles from './Content.module.css';
 
 export default function Content(props) {
-  const Content = Styles.content;
-  const Table = Styles.table;
-  const THeaders = Styles.theaders;
   return (
-    <div className={Content}>
-      <table className={Table}>
-        <thead className={THeaders}>
+    <div className={Styles.content}>
+      <table className={Styles.table}>
+        <thead className={Styles.theaders}>
           <tr>
             <th scope="col">Topics</th>
             <th scope="col">Cards</th>

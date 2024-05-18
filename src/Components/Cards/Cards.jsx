@@ -11,31 +11,33 @@ export default function Cards(){
     {id: 3, word: 'hamster', transcription: '[ˈhæm.stər]',translation: 'хомяк'},
     {id: 4, word: 'snake', transcription: '[sneɪk]',translation: 'змея'},
   ];
-	const wrapper = (Styles.wrapper);
-	const wordCard = (Styles.wordcard);
-	const container = (Styles.container);
-	const buttonCheck = Cn(Styles.button, Styles.check);
-	const buttonNext = Cn(Styles.button, Styles.next);
-	const translationWord = (Styles.translation);
 
 	const [showTranslation, setShowTranslation] = useState(false);
 	const handleCheck = () => {
 		setShowTranslation(true);
 	}
-	let marking = <button className={buttonCheck} onClick = {handleCheck}>Check</button>;
+	let marking = <button className={Cn(Styles.button, Styles.cardbutton)} onClick = {handleCheck}>Check</button>;
 	if(showTranslation){
-		marking = <p className={translationWord}>{animals[0].translation}</p>
+		marking = <p className={Styles.translation}>{animals[0].translation}</p>
+	}
+
+	const [nextWord, setNextWord] = useState(1);
+	const handleNext = () => {
+		setNextWord(animals.id+1)
 	}
   return(
-    <div className={wrapper}>
+    <div className={Styles.wrapper}>
 			<Header/>
-			<div className={container}>
-			<div className={wordCard}>
-        <h1>{animals[0].word}</h1>
-        <p>{animals[0].transcription}</p>
-				<p>{marking}</p>
-    </div>
-		<button className={buttonNext} onClick = {handleCheck}>Next word</button></div>
+			<div className={Styles.container}>
+				<button className={Cn(Styles.button, Styles.next)}>&#9668;</button>
+				<div className={Styles.wordcard}>
+					<h1>{animals[0].word}</h1>
+					<p>{animals[0].transcription}</p>
+					<p>{marking}</p>
+				</div>
+				<button className={Cn(Styles.button, Styles.next)}>&#9658;</button>
+				<p  className={Styles.par} style={{fontSize: '20px'}}>1 / 4</p>
+			</div>
 			<Footer/>
 		</div>
   )
